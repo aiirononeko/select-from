@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 3px;
+}
+
+#article h2:first-child {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px rgb(100, 116, 139);
+}
+
+#article h2:not(:first-child) {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 44px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px rgb(100, 116, 139);
+}
+
+#article h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 44px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+#article p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+#article p a {
+  color: #5b7c99;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+#article p code {
+  color: #5b7c99;
+  background-color: hsl(var(--border));
+  padding: 4px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+#article p a:hover {
+  color: #b6d0e2;
+}
+
+#article ul {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 40px;
+  list-style-type: disc;
+  margin-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#article ol {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 40px;
+  list-style-type: decimal;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#article pre {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 32px 0;
+  color: #fefefe;
+  border-radius: 5px;
+  background-color: #252525;
+  padding: 12px;
+  overflow: auto;
+}
+
+#article figure {
+  margin: 32px 0;
+}
+
+.toc {
+  .toc-list {
+    .toc-list-item {
+      font-size: 14px;
+      margin: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      color: rgb(125, 134, 145);
+    }
+
+    .toc-list-item::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      content: '';
+      background: rgb(125, 134, 145);
+      border: 2px solid #fff;
+    }
+
+    .toc-list-item.is-active-li {
+      color: rgb(2, 8, 23);
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .toc-list-item.is-active-li::before {
+      background: rgb(2, 8, 23);
+    }
+
+    .toc-list {
+      margin: 8px 0;
+
+      .toc-list-item {
+        margin: 10px 0;
+        font-size: 13px;
+      }
+
+      .toc-list-item::before {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
